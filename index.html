@@ -41,14 +41,187 @@
             <div id="main">
 
                 <!-- Featured Post -->
-                <article class="post featured">
-                    <header class="major">
-                        <h2><a href="#">Hi, I'm George<br /></a></h2>
-                        <p>A passionate and detail-oriented Quality Assurance Tester based in Sturry, UK, specializing in end-to-end software quality validation across UI, API, and performance testing domains. I apply structured methodologies based on IEEE 829 standards to ensure thorough coverage, consistency, and traceability throughout the testing lifecycle.
+                <section>
+        <h3>Version</h3>
+        <p><strong>OpenCart_XAMPP_UI_API_Performance_v1.1</strong></p>
+    </section>
 
-With hands-on experience in both manual and automated testing, I design and execute comprehensive test strategies for web applications like OpenCart, combining analytical precision with a focus on user experience and performance reliability. My technical expertise spans across tools such as Selenium WebDriver, PyTest, Postman, and Apache JMeter, complemented by strong proficiency in Python and Java programming.
+    <section>
+        <h3>1. Test Plan Identifier</h3>
+        <p>OpenCart_XAMPP_UI_API_Performance_v1.1</p>
+    </section>
 
-I take pride in building maintainable test frameworks using the Page Object Model (POM), developing dynamic API test suites, and conducting load and stress testing to validate system scalability. My work demonstrates a commitment to delivering high-quality, stable, and efficient software solutions through disciplined testing practices and detailed reporting. My goal is to ensure that every release meets the highest standards of functionality, usability, and performance.<br /></p>
+    <section>
+        <h3>2. Introduction</h3>
+        <p>
+            This Test Plan outlines the strategy, scope, and execution approach for validating the functional
+            and non-functional quality of the OpenCart e-commerce application hosted locally on XAMPP.
+            Testing includes UI functional testing, REST API validation, and comprehensive performance engineering
+            such as load, stress, scalability, endurance, and volume testing using Apache JMeter.
+        </p>
+    </section>
+
+    <section>
+        <h3>3. Test Items</h3>
+        <p>
+            OpenCart Frontend (Customer Storefront), OpenCart Backend (Admin Portal), REST API Endpoints 
+            (Authentication, Products, Cart, Orders), and the server/infrastructure under performance evaluation.
+        </p>
+    </section>
+
+    <section>
+        <h3>4. Features to be Tested</h3>
+
+        <h4>UI Functional Testing</h4>
+        <p>
+            User login and registration, product browsing and filters, cart operations (add, edit, remove), 
+            checkout and order confirmation.
+        </p>
+
+        <h4>Admin Testing</h4>
+        <p>
+            Admin login, product CRUD operations, order management.
+        </p>
+
+        <h4>API Testing</h4>
+        <p>
+            Login and token generation, product list retrieval, cart add/remove actions, order submission.
+        </p>
+
+        <h4>Performance Testing</h4>
+        <p>
+            Load testing (10–100–250–500 users), stress testing, scalability testing, endurance testing, 
+            volume testing, throughput and latency analysis, and resource monitoring via PerfMon 
+            (CPU, memory, disk, network).
+        </p>
+    </section>
+
+    <section>
+        <h3>5. Features Not to be Tested</h3>
+        <p>
+            Payment gateways, third-party modules, mobile/responsive layout, email or SMS notifications, 
+            mobile emulation, and any external integrations outside core OpenCart.
+        </p>
+    </section>
+
+    <section>
+        <h3>6. Approach</h3>
+
+        <h4>Manual Functional Testing</h4>
+        <p>
+            Exploratory and scenario-based testing on Chrome, Firefox, and Edge.
+        </p>
+
+        <h4>Automation Testing</h4>
+        <p>
+            PyTest with Page Object Model, soft assertions with screenshots, HTML and JSON reporting, 
+            parallel execution where applicable.
+        </p>
+
+        <h4>API Testing</h4>
+        <p>
+            Postman collections for modelling flows, automated API validation using Python requests, 
+            covering positive, negative, and security scenarios.
+        </p>
+
+        <h4>Performance Testing</h4>
+        <p>
+            Apache JMeter 5.6.3 with CSV-driven data, Uniform Random and Constant Throughput timers, 
+            AutoStop thresholds (>3s ART or >1% errors), and PerfMon-based resource monitoring.
+        </p>
+    </section>
+
+    <section>
+        <h3>7. Item Pass/Fail Criteria</h3>
+
+        <h4>Functional Criteria</h4>
+        <p>
+            <strong>Pass:</strong> All high-priority tests pass with no critical issues.  
+            <strong>Fail:</strong> Any defect causing data loss, security issues, or repeated critical failures.
+        </p>
+
+        <h4>Performance Criteria (SLA)</h4>
+        <p>
+            95% of requests under 3 seconds, error rate ≤1%, and system stability without resource exhaustion.
+            Tests fail if thresholds are exceeded or the application becomes unresponsive.
+        </p>
+    </section>
+
+    <section>
+        <h3>8. Suspension and Resumption Requirements</h3>
+        <p>
+            Testing is suspended in cases of server crashes, persistent 5xx errors, database lockups, 
+            unstable environment, or blocked critical functionality.  
+            Testing resumes once issues are fixed, the environment is stabilised, and required resets are completed.
+        </p>
+    </section>
+
+    <section>
+        <h3>9. Test Deliverables</h3>
+        <p>
+            Test Plan, functional test cases, automated PyTest suite, API Postman collection, JMeter test plans,
+            performance reports, traceability matrix, defect logs, and final test summary report.
+        </p>
+    </section>
+
+    <section>
+        <h3>10. Testing Tasks</h3>
+        <p>
+            Scope review, test case design, automation development, API modelling, execution of UI/API/Performance tests,
+            load and stress modelling, defect reporting and retesting, final reporting, and portfolio publication.
+        </p>
+    </section>
+
+    <section>
+        <h3>11. Environmental Needs</h3>
+
+        <h4>Software</h4>
+        <p>
+            Windows 11, XAMPP (Apache, MySQL, PHP), Chrome, Firefox, Edge, PyCharm, Postman, JMeter, Selenium, Python.
+        </p>
+
+        <h4>Optional Monitoring Tools</h4>
+        <p>
+            JMeter PerfMon plugin, Windows Resource Monitor, Apache access/error logs, MySQL slow query logs.
+        </p>
+    </section>
+
+    <section>
+        <h3>12. Responsibilities</h3>
+        <p>
+            <strong>Test Designer & Executor:</strong> George Petre.  
+            <strong>Reviewer:</strong> To be determined.  
+            <strong>Project Owner:</strong> George Petre.
+        </p>
+    </section>
+
+    <section>
+        <h3>13. Schedule</h3>
+        <p>
+            Week 1 – Scope & Test Plan creation.  
+            Week 2 – Manual Test Case development.  
+            Week 3 – Automation & API testing.  
+            Week 4 – Load, Stress, Scalability testing.  
+            Week 5 – Reporting & portfolio updates.
+        </p>
+    </section>
+
+    <section>
+        <h3>14. Risks & Contingencies</h3>
+        <p>
+            Risks include XAMPP environment instability, hardware limitations, lack of production-like datasets,
+            and documentation gaps.  
+            Mitigation includes gradual load increases, AutoStop rules, frequent environment resets, 
+            dataset generation, and validation using logs and PerfMon metrics.
+        </p>
+    </section>
+
+    <section>
+        <h3>15. Approvals</h3>
+        <p>
+            <strong>Test Owner:</strong> George Petre — Status: Pending  
+            <strong>Reviewer:</strong> To be determined — Status: Pending
+        </p>
                     </header>
                     <a href="#" class="image main"><img src="images/pic10.jpg" alt="" /></a>
                     <ul class="actions special">
