@@ -299,6 +299,96 @@ This work demonstrates proficiency in performance engineering, JMeter scripting,
                         </ul>
                     </article>
                 </section>
+                <!-- Overall Test Summary Report -->
+<section>
+    <header class="major">
+        <h2>Overall Test Summary Report – OpenCart Full Testing Project</h2>
+    </header>
+
+    <section>
+        <h3>Summary of Testing Activities</h3>
+        <p>
+            A complete test cycle was executed across UI Manual Testing, Admin Portal Testing, API Testing, 
+            and Performance Engineering in alignment with the IEEE 829 (2008) standard. 
+            The test effort included 64 front-end manual UI cases, 32 admin panel cases, 20 API tests, 
+            and 17 performance scenarios executed using JMeter, Postman, and PyTest-based automation.
+        </p>
+    </section>
+
+    <section>
+        <h3>Functional Test Results (UI)</h3>
+        <p>
+            The majority of UI test cases passed successfully, confirming correct behaviour for registration, 
+            login, navigation, product browsing, cart operations, and checkout flows. 
+            Out of 64 UI test cases, 62 passed and 2 failed, both of which were raised as documented defects:
+        </p>
+        <p>
+            1) <strong>OPC-REG-005 – Register with special characters in name:</strong> registration was accepted 
+            with invalid characters, indicating missing validation on both frontend and backend.<br />
+            2) <strong>OPC-CHK-004 – Edit quantity in cart then checkout:</strong> checkout failed due to missing 
+            shipping methods on the admin side, blocking order completion.
+        </p>
+        <p>
+            These failures are intentional findings from negative and edge-case scenarios and are tracked as 
+            known issues in the report.
+        </p>
+        <p><strong>Outcome:</strong> 62/64 Passed, 2/64 Failed (defects logged)</p>
+    </section>
+
+    <section>
+        <h3>Admin Portal Test Results</h3>
+        <p>
+            Admin Portal testing validated login, product and category management, order handling, and account 
+            configuration. All executed admin test cases completed successfully without functional defects, 
+            confirming that the back-office workflows behave as expected under normal usage.
+        </p>
+        <p><strong>Outcome:</strong> 100% Pass (Admin Panel)</p>
+    </section>
+
+    <section>
+        <h3>API Test Results</h3>
+        <p>
+            API endpoints for authentication, product retrieval, cart manipulation, and order submission were 
+            tested using Postman and automated Python scripts. Positive, negative, and boundary scenarios 
+            produced correct status codes, responses, and error messages, with no functional regression observed.
+        </p>
+        <p><strong>Outcome:</strong> 20/20 Passed (100% Pass)</p>
+    </section>
+
+    <section>
+        <h3>Performance Test Results</h3>
+        <p>
+            Load tests with stepped user levels (10–100–250–500) stayed within the defined SLA 
+            of 3 seconds average response time and ≤1% error rate. Endurance testing showed stable throughput 
+            and no signs of memory leaks or long-term degradation. Spike tests demonstrated resilience to 
+            sudden increases and decreases in traffic.
+        </p>
+        <p>
+            Stress testing intentionally pushed the system beyond its comfortable limits. Under very high 
+            concurrency (around 150–175 users), response times exceeded the SLA and error rates increased, 
+            which is consistent with the capacity limits of the local XAMPP environment rather than a defect 
+            in OpenCart itself.
+        </p>
+        <p><strong>Outcome:</strong> PASS for Load, Soak, and Spike; Expected SLA breach under Stress</p>
+    </section>
+
+    <section>
+        <h3>Overall System Quality Evaluation</h3>
+        <p>
+            The OpenCart application demonstrates strong functional stability, robust API behaviour, 
+            and predictable performance under realistic load profiles. Two functional defects were identified 
+            and documented: one related to missing input validation during registration and one related to 
+            missing shipping configuration blocking checkout. These are valuable findings from negative and 
+            boundary testing rather than random failures.
+        </p>
+        <p>
+            Overall, the system meets the defined test objectives for this environment and is suitable for 
+            typical small to medium traffic levels, with clear recommendations for improving input validation 
+            and shipping configuration.
+        </p>
+        <p><strong>Final System Status:</strong> PASS with known defects and stress-related limitations documented</p>
+    </section>
+</section>
 
             </div>
 
